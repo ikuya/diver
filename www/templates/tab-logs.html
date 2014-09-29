@@ -1,0 +1,13 @@
+<ion-view title="Logs">
+  <ion-nav-buttons side="right">
+    <button class="button button-clear ion-compose" ng-click="newLog()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="log in logs" type="item-text-wrap" href="#/tab/log/{{log.id}}">
+        {{log.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

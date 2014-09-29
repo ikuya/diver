@@ -1,0 +1,196 @@
+<div class="modal">
+  <ion-header-bar class="bar-secondary">
+    <h1 class="title">New Log</h1>
+    <button ng-click="closeNewLog()" class="button button-clear button-positive">Cancel</button>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="createNewLog(log)">
+      <div class="list">
+        <!-- GENERAL INFO. -->
+        <div class="item item-divider">
+          General Info
+        </div>
+        <!-- Serial Dive No. -->
+        <label class="item item-input">
+          <span class="input-label">Serial Dive No.</span>
+          <input type="number" ng-model="log.serialDiveNo">
+        </label>
+        <!-- Date -->
+        <label class="item item-input">
+          <span class="input-label">Date</span>
+          <input type="date" ng-model="log.date">
+        </label>
+        <!-- Location -->
+        <label class="item item-input">
+          <input type="text" placeholder="Location" ng-model="log.location">
+        </label>
+        <!-- Point -->
+        <label class="item item-input">
+          <input type="text" placeholder="Point" ng-model="log.point">
+        </label>
+        <!-- Beach or Boat -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Beach/Boat
+          </div>
+          <select ng-model="log.diveType">
+            <option>Beach</option>
+            <option>Boat</option>
+          </select>
+        </label>
+        <!-- Diving Shop -->
+        <label class="item item-input">
+          <input type="text" placeholder="Diving Shop" ng-model="log.shop">
+        </label>
+        <!-- Purpose -->
+        <label class="item item-input">
+          <input type="text" placeholder="Purpose" ng-model="log.purpose">
+        </label>
+        <!-- DIVE DATA -->
+        <div class="item item-divider">
+          Dive Data
+        </div>
+        <!-- Entry -->
+        <label class="item item-input">
+          <span class="input-label ion-arrow-down-a">Entry</span>
+          <input type="time" ng-model="log.entry">
+        </label>
+        <!-- Exit -->
+        <label class="item item-input">
+          <span class="input-label ion-arrow-up-a">Exit</span>
+          <input type="time" ng-model="log.exit">
+        </label>
+        <!-- Pressure -->
+        <label class="item item-input">
+          <span class="input-label">Start Pressure [kg/cm3]</span>
+          <input type="number" ng-model="log.startPressure">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">End Pressure [kg/cm3]</span>
+          <input type="number" ng-model="log.endPressure">
+        </label>
+        <!-- Depth of Water -->
+        <label class="item item-input">
+          <span class="input-label">Ave Depth</span>
+          <input type="number" ng-model="log.aveDepth">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Max Depth</span>
+          <input type="number" ng-model="log.maxDepth">
+        </label>
+        <!-- CONDITIONS -->
+        <div class="item item-divider">
+          Conditions
+        </div>
+        <!-- Weather -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+          Weather
+          </div>
+          <select ng-model="log.weather">
+            <option>Sunny</option>
+            <option>Partly Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+          </select>
+        </label>
+        <!-- Air Temp -->
+        <label class="item item-input">
+          <span class="input-label ion-thermometer">Air Temp</span>
+          <input type="number" ng-model="log.airTemp">
+        </label>
+        <!-- Water Temp -->
+        <label class="item item-input">
+          <span class="input-label ion-thermometer">Water Temp</span>
+          <input type="number" ng-model="log.waterTemp">
+        </label>
+        <!-- Wind -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+          Wind
+          </div>
+          <select ng-model="log.wind">
+            <option>Strong</option>
+            <option>Normal</option>
+            <option>Weak</option>
+          </select>
+        </label>
+        <!-- Wave -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+          Wave
+          </div>
+          <select ng-model="log.wave">
+            <option>Strong</option>
+            <option>Normal</option>
+            <option>Weak</option>
+          </select>
+        </label>
+        <!-- Visibility [m] -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+          Visibility
+          </div>
+          <select ng-model="log.visibility">
+            <option>1 - 5 m</option>
+            <option>5 - 10 m</option>
+            <option>10 - 15 m</option>
+            <option>15 - 20 m</option>
+            <option>20 - m</option>
+          </select>
+        </label>
+        <div class="item item-divider">
+          Equipment
+        </div>
+        <!-- Suit Type -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+          Suit Type
+          </div>
+          <select ng-model="log.suitType">
+            <option>Wet</option>
+            <option>Dry</option>
+          </select>
+        </label>
+        <!-- Suit Thickness -->
+        <label class="item item-input">
+          <span class="input-label">Suit Thickness [mm]</span>
+          <input type="number" ng-model="log.suitThickness">
+        </label>
+        <!-- Weight -->
+        <label class="item item-input">
+          <span class="input-label">Weight [kg]</span>
+          <input type="number" ng-model="log.weight">
+        </label>
+        <!-- Tank -->
+        <label class="item item-input item-select">
+          <div class="input-label">
+          Tank
+          </div>
+          <select ng-model="log.tank">
+            <option>Alminium</option>
+            <option>Steel</option>
+            <option>Nightrox</option>
+          </select>
+        </label>
+        <!-- Tank Size -->
+        <label class="item item-input">
+          <span class="input-label">Tank Size [l]</span>
+          <input type="number" ng-model="log.tankSize">
+        </label>
+        <!-- COMMENT -->
+        <div class="item item-divider">
+          Comment
+        </div>
+        <!-- Comment -->
+        <label class="item item-input">
+          <textarea placeholder="Comment" ng-model="log.comment"></textarea>
+        </label>
+      </div>
+      <!-- ** バディサインはログを登録した後で編集画面から入力させる ** -->
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">Create New Log</button>
+      </div>
+    </form>
+  </ion-content>
+</div>
